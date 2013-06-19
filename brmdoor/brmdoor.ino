@@ -115,7 +115,7 @@ void readCard()
   // wait for the result, while reblinking
   delay(100);
   digitalWrite(statusLed, statusState);
-  delay(150);
+  while(!rfidSerial.available());
 
   // read input from serial into the buffer
   i = 0;
